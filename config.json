@@ -1,0 +1,14 @@
+{
+  "server": {
+    "host": "tot-server-1mco.onrender.com",
+    "port": 443,
+    "secure": true,
+    "path": "/peerjs",
+    "key": "trapottreasure"
+  },
+  "minVersion": "1.0.0",
+  "message": {
+    "en": "",
+    "fr": ""
+  }
+}
