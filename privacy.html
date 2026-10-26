@@ -114,6 +114,13 @@
   <h2>How long data is kept</h2>
   <p>We do not keep any player data ourselves. Data on your device stays until you uninstall the game or clear its data. Our service providers keep their technical logs for the periods described in their own policies.</p>
 
+  <h2 id="delete">Delete your data</h2>
+  <ul>
+    <li><strong>On your device:</strong> uninstall the game, or open Android Settings, then Apps, Trap or Treasure, Storage, and tap Clear data. Everything the game saved is deleted.</li>
+    <li><strong>Ask us:</strong> email <a class="dev-email" href="mailto:your.email@example.com">your.email@example.com</a> with the subject "Delete my data", and give the player name you used online. We reply within one month. The game has no accounts, so in most cases we hold no data about you.</li>
+    <li><strong>Advertising data:</strong> in Android Settings, open Google, then Ads, to reset or delete your advertising ID. Google's own data can be managed at <a href="https://myaccount.google.com/data-and-privacy" rel="noopener">myaccount.google.com</a>.</li>
+  </ul>
+
   <h2>Your rights</h2>
   <p>Under the GDPR you can ask for access to your data, its correction or deletion, object to its use, or withdraw your consent. Because the game has no accounts, we usually hold no data that identifies you; write to <a class="dev-email" href="mailto:your.email@example.com">your.email@example.com</a> and we will answer within one month. You can also complain to the French data protection authority, the <a href="https://www.cnil.fr" rel="noopener">CNIL</a>.</p>
 
@@ -176,6 +183,13 @@
   <h2>Durée de conservation</h2>
   <p>Nous ne conservons nous-mêmes aucune donnée de joueur. Les données de votre appareil y restent jusqu’à la désinstallation du jeu ou l’effacement de ses données. Nos prestataires conservent leurs journaux techniques pendant les durées indiquées dans leurs propres politiques.</p>
 
+  <h2 id="supprimer">Supprimer vos données</h2>
+  <ul>
+    <li><strong>Sur votre appareil :</strong> désinstallez le jeu, ou ouvrez Paramètres Android, puis Applications, Piège ou Trésor, Stockage, et touchez Effacer les données. Tout ce que le jeu a enregistré est supprimé.</li>
+    <li><strong>En nous écrivant :</strong> envoyez un e-mail à <a class="dev-email" href="mailto:your.email@example.com">your.email@example.com</a> avec l’objet « Supprimer mes données », en indiquant le nom de joueur utilisé en ligne. Nous répondons sous un mois. Le jeu n’a pas de compte : dans la plupart des cas, nous ne détenons aucune donnée vous concernant.</li>
+    <li><strong>Données publicitaires :</strong> dans les Paramètres Android, ouvrez Google, puis Annonces, pour réinitialiser ou supprimer votre identifiant publicitaire. Les données de Google se gèrent sur <a href="https://myaccount.google.com/data-and-privacy" rel="noopener">myaccount.google.com</a>.</li>
+  </ul>
+
   <h2>Vos droits</h2>
   <p>Selon le RGPD, vous pouvez demander l’accès à vos données, leur rectification ou leur suppression, vous opposer à leur utilisation ou retirer votre consentement. Comme le jeu n’a pas de compte, nous ne détenons en général aucune donnée qui vous identifie ; écrivez à <a class="dev-email" href="mailto:your.email@example.com">your.email@example.com</a> et nous vous répondrons sous un mois. Vous pouvez aussi adresser une réclamation à la <a href="https://www.cnil.fr" rel="noopener">CNIL</a>.</p>
 
@@ -202,6 +216,11 @@
   }
   document.querySelectorAll('.lang button').forEach(b => b.onclick = () => setLang(b.dataset.lang));
   setLang(startLang);
+  // #delete or #supprimer: jump to the deletion section in the shown language
+  if(location.hash === '#delete' || location.hash === '#supprimer'){
+    const target = document.getElementById(document.documentElement.lang === 'fr' ? 'supprimer' : 'delete');
+    if(target) setTimeout(() => target.scrollIntoView(), 50);
+  }
 </script>
 </body>
 </html>
