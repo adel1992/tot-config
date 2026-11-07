@@ -1,7 +1,7 @@
 # Trap or Treasure – remote settings
 
 The game reads `config.json` at startup:
-https://adel1992.github.io/tot-config/config.json
+https://traportreasure.fr/tot-config/config.json
 
 - `server`: online server used by the game
 - `minVersion`: players with an older version must update to play online
